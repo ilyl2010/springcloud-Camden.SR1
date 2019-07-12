@@ -1,10 +1,8 @@
 server:
-  port: 7800
-user: 
-  userServicePath: http://localhost:7900/simple/
+  port: 7801
 spring:
   application:
-     name: springcloud-eureka-consumer
+     name: springcloud-eureka-consumer-ribbon
 eureka:
   client:
     serviceUrl:
