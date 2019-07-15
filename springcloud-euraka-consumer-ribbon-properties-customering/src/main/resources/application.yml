@@ -1,0 +1,15 @@
+server:
+  port: 7802
+spring:
+  application:
+     name: springcloud-eureka-consumer-ribbon2
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://root:123456@localhost:8761/eureka
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${spring.cloud.client.ipAddress}:${spring.application.instance_id:${server.port}}
+springcloud-eureka-provider:
+  ribbon:
+    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule 
