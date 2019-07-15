@@ -20,6 +20,8 @@
 		<module>springcloud-eureka-server</module>
 		<module>springcloud-euraka-provider</module>
 		<module>springcloud-euraka-provider1</module>
+		<module>springcloud-euraka-provider2</module>
+		<module>springcloud-euraka-provider3</module>
 		<module>springcloud-euraka-consumer</module>
 		<module>springcloud-euraka-consumer-ribbon</module>
 	</modules>

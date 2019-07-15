@@ -12,6 +12,7 @@ import com.netflix.loadbalancer.RandomRule;
 public class TestConfiguration {
 	@Autowired
 	IClientConfig config;
+	
 	@Bean
 	public IRule ribbonRule(IClientConfig config) {
 		return new RandomRule();
