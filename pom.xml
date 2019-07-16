@@ -27,6 +27,7 @@
 		<module>springcloud-euraka-consumer-ribbon</module>
 		<module>springcloud-consumer-ribbon-without-eureka</module>
 		<module>springcloud-euraka-consumer-feign</module>
+		<module>springcloud-euraka-consumer-feign-customizing</module>
 	</modules>
 	
 	
