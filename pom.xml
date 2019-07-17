@@ -18,6 +18,7 @@
 	
 	<modules>
 		<module>springcloud-eureka-server</module>
+		<module>springcloud-eureka-server2</module>
 		<module>springcloud-euraka-provider</module>
 		<module>springcloud-euraka-provider1</module>
 		<module>springcloud-euraka-provider2</module>
