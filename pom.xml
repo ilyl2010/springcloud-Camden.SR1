@@ -27,8 +27,10 @@
 		<module>springcloud-euraka-consumer-ribbon-properties-customering</module>
 		<module>springcloud-euraka-consumer-ribbon</module>
 		<module>springcloud-consumer-ribbon-without-eureka</module>
+		<module>springcloud-euraka-consumer-ribbon-with-hystrix</module>
 		<module>springcloud-euraka-consumer-feign</module>
 		<module>springcloud-euraka-consumer-feign-customizing</module>
+		<module>springcloud-euraka-consumer-ribbon-with-hystrix-propagation</module>
 	</modules>
 	
 	
