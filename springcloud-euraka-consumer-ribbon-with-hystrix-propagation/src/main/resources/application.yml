@@ -1,0 +1,13 @@
+server:
+  port: 7801
+spring:
+  application:
+     name: springcloud-eureka-consumer-ribbon
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://root:123456@localhost:8761/eureka
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${spring.cloud.client.ipAddress}:${spring.application.instance_id:${server.port}}
+    

@@ -7,7 +7,6 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
-import com.netflix.hystrix.contrib.javanica.annotation.HystrixProperty;
 import com.zc.entity.User;
 
 @RestController
@@ -16,7 +15,7 @@ public class MovieController {
   private RestTemplate restTemplate;
   
   @GetMapping("/movie/{id}")
-  @HystrixCommand(fallbackMethod="findByIdFallback",commandProperties=@HystrixProperty(name="execution.isolation.strategy",value="SEMAPHONE"))
+  @HystrixCommand(fallbackMethod="findByIdFallback")
   public User findById(@PathVariable Long id) {
 	      return this.restTemplate.getForObject("http://springcloud-eureka-provider/simple/"+ id, User.class);
   }
