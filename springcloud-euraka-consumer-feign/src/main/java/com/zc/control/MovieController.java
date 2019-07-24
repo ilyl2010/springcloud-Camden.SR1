@@ -18,14 +18,5 @@ public class MovieController {
 		return this.userFeignClient.findById(id);
 	}
 	
-	 @GetMapping("/test")
-	 //http://localhost:7806/test?id=1
-	  public User testPost(User user) {
-	    return this.userFeignClient.postUser(user);
-	  }
-
-	  @GetMapping("/test-get")
-	  public User testGet(User user) {
-	    return this.userFeignClient.getUser(user);
-	  }
+	
 }
