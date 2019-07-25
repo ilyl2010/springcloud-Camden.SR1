@@ -8,23 +8,20 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.zc.entity.User;
 
-@FeignClient(name="springcloud-eureka-provider",fallback=FeignClientFallback.class)
+@FeignClient(name = "springcloud-eureka-provider", /*fallback = FeignClientFallback.class, */fallbackFactory = UserFeignClientHystrixFallbackFactory.class)
 public interface UserFeignClient {
-  @RequestMapping(value = "/simple/{id}", method = RequestMethod.GET)
-  public User findById(@PathVariable("id") Long id); // 两个坑：1. @GetMapping不支持   2. @PathVariable得设置value
+	@RequestMapping(value = "/simple/{id}", method = RequestMethod.GET)
+	public User findById(@PathVariable("id") Long id); // 两个坑：1. @GetMapping不支持 2. @PathVariable得设置value
 }
 
-/**
-* 回退类FeignClientFallback需实现Feign Client接口
-* FeignClientFallback也可以是public class，没有区别
-*/
 @Component
 class FeignClientFallback implements UserFeignClient {
-  @Override
-  public User findById(Long id) {
-    User user = new User();
-    user.setId(-1L);
-    user.setUsername("默认用户");
-    return user;
-  }
+	
+	@Override
+	public User findById(Long id) {
+		User user = new User();
+		user.setId(0L);
+		user.setUsername("默认用户");
+		return user;
+	}
 }
