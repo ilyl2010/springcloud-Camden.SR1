@@ -33,6 +33,7 @@
 		<module>springcloud-euraka-consumer-ribbon-with-hystrix-propagation</module>
 		<module>springcloud-hystrix-dashboard</module>
 		<module>springcloud-hystrix-turbine</module>
+		<module>springcloud-gateway-zuul</module>
 	</modules>
 	
 	
