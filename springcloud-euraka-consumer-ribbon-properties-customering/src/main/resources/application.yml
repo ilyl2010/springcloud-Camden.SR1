@@ -2,7 +2,7 @@ server:
   port: 7802
 spring:
   application:
-     name: springcloud-eureka-consumer-ribbon2
+     name: springcloud-eureka-consumer-ribbon
 eureka:
   client:
     serviceUrl:

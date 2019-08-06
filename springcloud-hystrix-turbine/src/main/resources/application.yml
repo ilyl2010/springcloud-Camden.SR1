@@ -1,0 +1,17 @@
+server:
+  port: 8888
+spring:
+  application:
+    name:microservice-hystrix-turbine
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://root:123456@localhost:8761/eureka
+  instance:
+    prefer-ip-address: true
+turbine:
+  aggregator:
+    clusterConfig: default
+  appConfig: springcloud-eureka-consumer-ribbon,springcloud-eureka-consumer-ribbon1
+  clusterNameExpression: new String("default")
+

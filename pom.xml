@@ -32,6 +32,7 @@
 		<module>springcloud-euraka-consumer-feign-customizing</module>
 		<module>springcloud-euraka-consumer-ribbon-with-hystrix-propagation</module>
 		<module>springcloud-hystrix-dashboard</module>
+		<module>springcloud-hystrix-turbine</module>
 	</modules>
 	
 	
